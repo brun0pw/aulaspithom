@@ -1,5 +1,7 @@
-#include<cs50.h>
-#include<stdio.h>
+
+#include <stdio.h>
 
 
-printf("hello word")
+int main () {
+printf("hello word");
+}
