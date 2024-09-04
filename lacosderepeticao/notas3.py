@@ -1,28 +1,41 @@
 import os
 os.system("clls || clear")
 """
-escreva um algoritmo que esceva 3 notas de aluno
+escreva um alos.system("clls || clear")goritmo que esceva 3 notas de aluno
 caso seja menor que 0 e maior que 10 mostre a pergunta novamente
 calcule a média e caso a me dia for a partir de 7 ele está aprovado
 caso seja entre 5 e 6.9 ele esta de recuperação
 caso seja menor que 5 ele está reprovado
 """
-quantidadedenotas = 3
+#definindo variaveis
+quantidadedenotas = (1)
 soma = 0
-for i in range(3):
- notas =  float(input(f"Digite sua {i + 1}° nota: "))
- soma += notas
- media = soma / quantidadedenotas
+for i in range(quantidadedenotas):
+   while True:
+      notas =  float(input(f"Digite sua {i + 1}° nota: "))
 
-while True :
+      
+# caso a nota seja errada a notas iram retornar com o mesmo valor que é 0
+      if notas < 0 or notas > 10:
+         print("===ERRO===")
+         
+      else : #somando a média
+            soma += notas
+            break
+#calculando a media
+media = soma / quantidadedenotas
+
+#isso limpa o terminal
+os.system("clls || clear")
+
+# isso diz se a pessoa está aprovado ou não 
+if media >= 7:
+   print("Aprovado")
+elif media >= 5:   
+   print("você está de recuperação\n")
+else : 
+   print("Você está perdido!!") 
+
+
+
    
-   if media >= 7:
-      print("Aprovado")
-      break
-   elif media >= 5 or media >= 6.9:   
-          print("você está de recuperação\n")
-          break
-   else:
-       print("Você está perdido") 
-       break
-print(media)
