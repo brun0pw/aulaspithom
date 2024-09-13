@@ -10,7 +10,7 @@ def resultadodeimc (imc_total):
    if imc_total < 18:
         print("você está abaixo do peso\nconsulte um  nutricionista para orientação")
    elif imc_total > 18.5 and imc_total < 24.9:
-       print("você está com peso normal\nMAntenha hábitos saudaveis!")
+       print("você está com peso normal\nMantenha hábitos saudaveis!")
    elif imc_total > 25 and imc_total < 29.9:
        print("você está com sobrepeso\nConsidere uma dieta saudavel e atividade fisica!")
    elif imc_total > 30 and imc_total < 34.9:
