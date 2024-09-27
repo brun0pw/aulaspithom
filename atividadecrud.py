@@ -14,7 +14,7 @@ class Cliente:
     peso : float
     altura : float
 
-QUANTIDADE_ALUNOS = 4
+QUANTIDADE_ALUNOS = 1
 
 
 #solicitando dados
@@ -46,7 +46,7 @@ nome_do_arquivo = "carteira_de_clientes.txt"
 
 with open(nome_do_arquivo, "a") as todos_alunos:
     for clthanos in alunos:
-        alunos.write({clthanos.nome}, {clthanos.sobrenome}, {clthanos.idade},{clthanos.peso},{clthanos.altura})
+        todos_alunos.write(f"{clthanos.nome}, {clthanos.sobrenome}, {clthanos.idade}, {clthanos.peso},{clthanos.altura}\n")
 
 todos_alunos.close()
 #Fazer leitura de dados do arquivo carteira_de_clientes.txt e mostre no terminal.

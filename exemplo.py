@@ -49,11 +49,11 @@ for aluno in lista_alunos:
    print(f"nome: {aluno.nome}")
    print(f"idade: {aluno.idade}")
 
-nome_do_arquivo = "LIsta_de_alunos_SENAI.txt"
+nome_do_arquivo = "Lista_de_alunos_SENAI.txt"
 #abrindo arquivo e definindo que se rá feita a escrita de dados.
-with open(nome_do_arquivo, "a") as arquivo_alunos:
+with open(nome_do_arquivo, "w") as arquivo_alunos:
    for aluno in lista_alunos:
-       lista_alunos.write(f"{aluno.nome}, {aluno.idade}\n")
+       arquivo_alunos.write(f"{aluno.nome}, {aluno.idade}\n")
 
 print("\n=== Dados dos alounos salvo com sucesso!===")
 #fechar conexão do arquivo
