@@ -82,20 +82,27 @@ CÓDIGO      |    DESCRIÇÃO
         
     
     elif escolha == 2:
-     if lista_habitantes == []:
-       print("Nenhum habitante foi adicionando ainda!")
-     lendo_arquivo = []
-     with open(nome_do_arquivo, "r") as arquivo_de_origem:
-       for linha in arquivo_de_origem:
-        media_salarial, maior_idade, menor_idade, quantidade_mulheres = linha.strip().split(",")
-        lendo_arquivo.append(Dados_coletados(media_salarial= float(media_salarial), maior_idade=int(maior_idade), menor_idade=int(menor_idade), quantidade_mulheres=int(quantidade_mulheres)))
+        lendo_arquivo = []
+        maior, menor = menor_maior(lista_idade)
+        media_salario = media(lista_salario)
+        dados_coletados = Dados_coletados(
+                media_salarial = media_salario,
+                maior_idade = maior,
+                menor_idade = menor,
+                quantidade_mulheres = quantidade_de_mulheres
+    ) 
+        dados_completos.append(dados_coletados)
+        with open(nome_do_arquivo, "r") as arquivo_de_origem:
+            for linha in arquivo_de_origem:
+                media_salarial, maior_idade, menor_idade, quantidade_mulheres = linha.strip().split(",")
+    
+        lendo_arquivo.append(dados_completos)
         print("\n\n=== Exibindo dados dos alunos do arquivo ===")
         for aluno in lendo_arquivo:
             print(f"media salarial {aluno.media_salarial}")
             print(f"qtd mulheres: {aluno.quantidade_mulheres}")
             print(f"menor Idade: {aluno.menor_idade}")
             print(f"maior Idade: {aluno.maior_idade}")
-     break
-    else:
-         print("===ERRO===")    
+        break
+    
     
